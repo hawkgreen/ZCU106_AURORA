@@ -1,0 +1,2 @@
+# ZCU106_AURORA
+在ZCU106上使用AURORA协议通过光纤接口通信
