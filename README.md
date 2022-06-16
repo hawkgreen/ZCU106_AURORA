@@ -7,7 +7,7 @@
 目前自己看文档，发现BANK225的REFCLK貌似有问题，但是有人调通了：
 https://blog.csdn.net/quhai1340/article/details/107400764
 还不清楚是如何修改时钟管脚的。
-虽然不清楚但是，只要选择BANK225 的参考1时钟，频率设置为156.25MHz，并且，真正的输入时钟使用BANK225的REFCLK(U9,U10)，即在XDC里加入如下约束：
+虽然不清楚但是，只要选择BANK225 的参考1时钟，频率设置为156.25MHz，并且，真正的输入时钟使用BANK226的REFCLK1(U9,U10)，即在XDC里加入如下约束：
 set_property PACKAGE_PIN U10 [get_ports GTHQ0_P]
 GTHQ0_N 并没有设置，应该是IP核自己进行了设置。
 这样就可以进行通信，不需要关心IP内部怎么连接。
