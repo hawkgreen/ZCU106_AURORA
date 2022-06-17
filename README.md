@@ -11,3 +11,4 @@ https://blog.csdn.net/quhai1340/article/details/107400764
 set_property PACKAGE_PIN U10 [get_ports GTHQ0_P],
 GTHQ0_N 并没有设置，应该是IP核自己进行了设置。
 这样就可以进行通信，不需要关心IP内部怎么连接。
+注意:xdc中，请给init_pma 和 reset 分配管脚，因为zcu106的switch的不按低电平，按高电平，所以他俩绑定在switch上就行。
